@@ -89,4 +89,9 @@ var LOFI_DRAW = function() {
     AntiAim.SetLBYOffset( LBY );
 }
 
+function Unload() {
+    AntiAim.SetOverride(0);
+}
+
 Cheat.RegisterCallback("Draw", "LOFI_DRAW");
+Cheat.RegisterCallback("Unload", "Unload")
